@@ -42,6 +42,7 @@
     table)
   "Syntax table for keyval-mode")
 
+; TODO: Rewrite this function
 (defun keyval-indent-line ()
   "Indent current line as a KeyValue line"
   (beginning-of-line)
@@ -52,7 +53,9 @@
           (progn
             (save-excursion 
               (forward-line -1)
-              (setq cur-indent (- (current-indentation) keyval-indent-offset)))
+              (if (looking-at "^[ \t]*{")
+                  (setq cur-indent (current-indentation))
+                (setq cur-indent (- (current-indentation) keyval-indent-offset))))
             (if (< cur-indent 0)
                 (setq cur-indent 0)))
         (save-excursion
