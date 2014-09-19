@@ -1,12 +1,12 @@
 keyval-mode.el
 ==============
 
-Major mode for editing files written in the KeyValues format that is
-used in Valve's Source engine. A description of this format can be
-found here: https://developer.valvesoftware.com/wiki/KeyValues
+An Emacs major mode for editing files written in the KeyValues format
+that is used in Valve's Source engine. A description of this format
+can be found here: https://developer.valvesoftware.com/wiki/KeyValues
 
-Install
--------
+Installation
+------------
 
 Copy `keyval-mode.el` to a directory that's on your `load-path` and
 then add the following line to your `.emacs` file:
